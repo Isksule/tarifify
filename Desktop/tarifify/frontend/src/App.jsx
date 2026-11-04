@@ -62,7 +62,7 @@ function App() {
       if (inputText.trim()) formData.append('rawText', inputText);
       if (selectedFile) formData.append('file', selectedFile);
 
-      const response = await fetch('http://localhost:5000/api/parse-recipe', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/parse-recipe`, {
         method: 'POST',
         body: formData,
       });

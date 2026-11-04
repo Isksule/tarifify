@@ -63,7 +63,7 @@ app.post('/api/parse-recipe', upload.single('file'), async (req, res) => {
     contents.push(promptText);
 
    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemini-1.5-flash',
       contents: contents,
     });
 
